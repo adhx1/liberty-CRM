@@ -1,0 +1,109 @@
+.bill-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+.bill-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+/* Section headings */
+.bill-container h4 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 4px;
+}
+
+/* Paragraph spacing */
+.bill-container p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+/* Divider */
+.bill-container hr {
+  margin: 15px 0;
+  border: none;
+  border-top: 1px solid #eee;
+}
+
+/* Amount section */
+.bill-container strong {
+  font-weight: 600;
+}
+
+/* Highlight totals */
+.bill-container p:last-of-type {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* Print button */
+.bill-container button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+}
+
+/* Hover effect */
+.bill-container button:hover {
+  background: #333;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .bill-container {
+    padding: 15px;
+  }
+
+  .bill-container h2 {
+    font-size: 18px;
+  }
+
+  .bill-container p {
+    font-size: 13px;
+  }
+}
+
+/* Print styling */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .bill-container,
+  .bill-container * {
+    visibility: visible;
+  }
+
+  .bill-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .bill-container button {
+    display: none;
+  }
+}

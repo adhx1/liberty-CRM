@@ -1,0 +1,93 @@
+/* Grid Layout */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Cards */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Card Title */
+.card h4 {
+  font-size: 15px;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Card Value */
+.card p {
+  font-size: 26px;
+  font-weight: 700;
+  color: #111;
+}
+
+/* Special Styling for Profit */
+.card:nth-child(3) p {
+  color: #1a7f37;
+}
+/* Clickable Cards */
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  background: #f7f8fa;
+}
+
+/* Charts Layout */
+.charts-container {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.chart-box {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .charts-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Responsive */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 750px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .card p {
+    font-size: 22px;
+  }
+}

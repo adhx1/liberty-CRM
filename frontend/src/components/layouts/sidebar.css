@@ -1,0 +1,124 @@
+.sidebar {
+  width: 220px;
+  background: #1f1f2e;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar a {
+  color: #bbb;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.sidebar a.active {
+  background: #3a3a5a;
+  color: white;
+}
+
+.logout-btn {
+  margin-top: 20px;
+  padding: 10px;
+  background: #ff4d4f;
+  border: none;
+  color: white;
+  border-radius: 6px;
+}.layout {
+  display: flex;
+}
+
+.sidebar {
+  width: 230px;
+  background: black;
+  color: white;
+  min-height: 100vh;
+  transition: 0.3s;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Toggle button hidden by default */
+.menu-toggle {
+  display: none;
+  background: black;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+.close-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  align-self: flex-end;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .close-btn {
+    display: block;
+  }
+}
+
+/* Mobile behavior */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    height: 100vh;
+    z-index: 1000;
+    width: 230px; /* keep original width */
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+   .sidebar {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    height: 100vh;
+    z-index: 1000;
+    width: 230px; /* keep original width */
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
