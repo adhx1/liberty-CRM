@@ -30,6 +30,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     ".railway.app",
+    ".netlify.app",
 ]
 
 
@@ -71,7 +72,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "https://your-netlify-app.netlify.app",
+    "https://libertycrm.netlify.app",
 ]
 ROOT_URLCONF = 'backend.urls'
 
