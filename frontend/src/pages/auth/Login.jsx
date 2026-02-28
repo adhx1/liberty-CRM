@@ -32,6 +32,11 @@ const Login = () => {
         <input name="password" type="password" placeholder="Password" onChange={handleChange} />
         <button type="submit">Login</button>
       </form>
+
+      <p className="auth-switch">
+        Don't have an account?{" "}
+        <Link to="/signup">Create one</Link>
+      </p>
     </div>
   );
 };
