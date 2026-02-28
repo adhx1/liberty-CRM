@@ -103,9 +103,7 @@ DATABASES = {
     )
 }
 
-DATABASES["default"]["OPTIONS"] = {
-    "auth_plugin": "mysql_native_password",
-}
+
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
 
