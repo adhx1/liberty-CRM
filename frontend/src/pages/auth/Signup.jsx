@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { signup } from "../../api/auth";
 import "./Auth.css";
+import { Link } from "react-router-dom";
+
 
 const Signup = () => {
   const [form, setForm] = useState({
