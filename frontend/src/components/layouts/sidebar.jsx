@@ -1,7 +1,7 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
-import "./Sidebar.css";
+import "./sidebar.css";
 
 const Sidebar = ({ isOpen, setIsOpen }) => {
   const { logout } = useContext(AuthContext);
