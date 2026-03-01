@@ -9,4 +9,4 @@ COPY backend/ .
 
 RUN python manage.py collectstatic --noinput
 
-CMD ["gunicorn", "backend.wsgi:application", "--bind", "0.0.0.0:8080"]
+CMD ["sh", "-c", "gunicorn backend.wsgi:application --bind 0.0.0.0:$PORT"]
