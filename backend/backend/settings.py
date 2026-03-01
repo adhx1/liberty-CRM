@@ -29,8 +29,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "fallback-secret-key")# SECURITY WARNI
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "*",
-  
+    "liberty-crm-production.up.railway.app",
 ]
 
 
