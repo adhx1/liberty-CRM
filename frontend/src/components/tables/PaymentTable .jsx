@@ -4,7 +4,8 @@ export const PaymentTable = ({ data, onEdit, onDelete }) => (
       <thead>
         <tr>
           <th>Job</th>
-          <th>Amount</th>
+          <th>Total Amount</th>
+          <th>Paid</th>
           <th>Mode</th>
           <th>Balance</th>
           <th>Actions</th>
