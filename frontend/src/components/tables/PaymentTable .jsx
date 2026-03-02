@@ -6,7 +6,7 @@ export const PaymentTable = ({ data, onEdit, onDelete }) => (
           <th>Job</th>
           <th>Amount</th>
           <th>Mode</th>
-          <th>Settled</th>
+          <th>Balance</th>
           <th>Actions</th>
         </tr>
       </thead>
@@ -16,7 +16,7 @@ export const PaymentTable = ({ data, onEdit, onDelete }) => (
             <td>{p.job_name}</td>
             <td className="amount">{p.amount}</td>
             <td>{p.payment_mode}</td>
-            <td>{p.is_settled ? "Yes" : "No"}</td>
+            <td className="balance">{p.balance}</td> 
             <td className="actions">
               <button onClick={() => onEdit(p)}>Edit</button>
               <button onClick={() => onDelete(p.id)}>Delete</button>
