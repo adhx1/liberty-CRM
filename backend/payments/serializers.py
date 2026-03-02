@@ -12,7 +12,7 @@ class PaymentSerializer(serializers.ModelSerializer):
     )
 
     balance = serializers.SerializerMethodField()
-
+    test_field = serializers.CharField(default="WORKING", read_only=True)
     class Meta:
         model = Payment
         fields = [
@@ -24,7 +24,9 @@ class PaymentSerializer(serializers.ModelSerializer):
             "amount",
             "payment_mode",
             "balance",
-            "created_at"
+            "created_at",
+            "test_field"
+
         ]
 
     def get_balance(self, obj):
@@ -35,3 +37,4 @@ class PaymentSerializer(serializers.ModelSerializer):
         )["total"] or 0
 
         return job.total_amount - total_paid
+    
