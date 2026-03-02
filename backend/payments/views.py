@@ -3,5 +3,5 @@ from .models import Payment
 from .serializers import PaymentSerializer
 
 class PaymentViewSet(ModelViewSet):
-    queryset = Payment.objects.select_related('job').order_by('-created_at')
+    queryset = Payment.objects.all()
     serializer_class = PaymentSerializer
