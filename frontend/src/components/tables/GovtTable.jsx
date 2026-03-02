@@ -14,7 +14,7 @@ export const GovtTable = ({ data, onEdit, onDelete }) => (
       {data.map((p) => (
         <tr key={p.id}>
           <td>{p.job_name} - {p.customer_name}</td>
-          <td>{p.amount}</td>
+          <td>AED{p.amount}</td>
           <td>{p.department}</td>
            <td className="actions">
         <button onClick={() => onEdit(p)}>

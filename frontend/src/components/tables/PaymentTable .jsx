@@ -14,9 +14,15 @@ export const PaymentTable = ({ data, onEdit, onDelete }) => (
         {data.map((p) => (
           <tr key={p.id}>
             <td>{p.job_name}</td>
-            <td className="amount">{p.amount}</td>
+
+            <td className="amount">AED{p.total_amount}</td>
+
+            <td className="paid">AED{p.amount}</td>
+
+            <td className="balance">AED{p.balance ?? 0}</td>
+
             <td>{p.payment_mode}</td>
-            <td className="balance">{p.balance}</td> 
+
             <td className="actions">
               <button onClick={() => onEdit(p)}>Edit</button>
               <button onClick={() => onDelete(p.id)}>Delete</button>

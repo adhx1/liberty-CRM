@@ -13,7 +13,7 @@ export  const ExpenseTable = ({ data ,onEdit,onDelete}) => (
       {data.map((p) => (
         <tr key={p.id}>
           <td>{p.category}</td>
-          <td>{p.amount}</td>
+          <td>AED{p.amount}</td>
           <td>{p.description}</td>
            <td className="actions">
         <button onClick={() => onEdit(p)}>

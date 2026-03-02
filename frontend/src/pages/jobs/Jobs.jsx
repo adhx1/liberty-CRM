@@ -105,7 +105,7 @@ const handleDeleteJob = async (id) => {
         <td>{job.customer_name}</td>
         <td>{job.service_name}</td>
         <td>{job.due_date}</td>
-        <td>{job.total_amount}</td>
+        <td>AED{job.total_amount}</td>
         <td>
           <span className={`status-badge status-${job.status}`}>
             {job.status}
