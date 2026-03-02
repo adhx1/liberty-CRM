@@ -14,7 +14,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
 
   return (
     <div className={`sidebar ${isOpen ? "open" : ""}`}>
-      <div className="logo">Liberty</div>
+      <div className="logo">Liberty Office Service</div>
       <button
   className="close-btn"
   onClick={() => setIsOpen(false)}
