@@ -4,6 +4,10 @@ from .models import Payment
 
 
 class PaymentSerializer(serializers.ModelSerializer):
+
+    job_name = serializers.CharField(source="job.service_name", read_only=True)
+    customer_name = serializers.CharField(source="job.customer.name", read_only=True)
+
     total_amount = serializers.DecimalField(
         source="job.total_amount",
         max_digits=10,
@@ -12,7 +16,7 @@ class PaymentSerializer(serializers.ModelSerializer):
     )
 
     balance = serializers.SerializerMethodField()
-    test_field = serializers.CharField(default="WORKING", read_only=True)
+
     class Meta:
         model = Payment
         fields = [
@@ -24,19 +28,12 @@ class PaymentSerializer(serializers.ModelSerializer):
             "amount",
             "payment_mode",
             "balance",
-            "created_at",
-            "test_field",
-            "debug",
-
+            "created_at"
         ]
 
     def get_balance(self, obj):
-        job = obj.job
-
-        total_paid = job.payments.aggregate(
+        total_paid = obj.job.payments.aggregate(
             total=Sum("amount")
         )["total"] or 0
 
-        return job.total_amount - total_paid
-    
-debug = serializers.CharField(default="WORKING", read_only=True)
+        return obj.job.total_amount - total_paid
