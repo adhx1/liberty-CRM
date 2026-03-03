@@ -25,7 +25,8 @@ class PaymentSerializer(serializers.ModelSerializer):
             "payment_mode",
             "balance",
             "created_at",
-            "test_field"
+            "test_field",
+            "debug",
 
         ]
 
@@ -38,3 +39,4 @@ class PaymentSerializer(serializers.ModelSerializer):
 
         return job.total_amount - total_paid
     
+debug = serializers.CharField(default="WORKING", read_only=True)
