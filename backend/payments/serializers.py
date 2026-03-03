@@ -28,7 +28,7 @@ class PaymentSerializer(serializers.ModelSerializer):
             "amount",
             "payment_mode",
             "balance",
-            "created_at"
+            "created_at",
         ]
 
     def get_balance(self, obj):
