@@ -6,8 +6,8 @@ export const PaymentTable = ({ data, onEdit, onDelete }) => (
           <th>Job</th>
           <th>Total Amount</th>
           <th>Paid</th>
-          <th>Mode</th>
           <th>Balance</th>
+          <th>Mode</th>
           <th>Actions</th>
         </tr>
       </thead>
